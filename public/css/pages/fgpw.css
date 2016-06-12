@@ -1,0 +1,122 @@
+/*
+    Stylesheet for Portal Forgot Password Page
+*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,500,300,100);
+
+/* Main Section */
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #e8e8e8;
+    font-family: Roboto, 'sans-serif';
+    font-weight: 400;
+    font-size: 13px;
+}
+
+#wrapper {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background: none;
+    padding-bottom: 50px;
+}
+#fgpw-logo {
+    width: 500px;
+    text-align: center;
+    margin: 0px auto 15px;
+}
+
+/* Forgot Password Section */
+
+.fgpw-section {
+    width: 500px;
+    border-radius: 5px;
+    padding-top: 25px;
+    margin: 80px auto;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f6f6f6+0,e6e6e6+100 */
+    background: #fff; /* Old browsers */
+    border: 1px solid #ccc;
+}
+
+/* Forgot Password Header Section */
+h3.header-content {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+.fgpw-header {
+    font-size: 16px !important;
+    /* This login-header is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the login-header elements */
+    width: 100%;
+    position: relative;
+    background: #328fce;
+    color: #fff;
+    text-align: center;
+    padding: 2.5px 0px 2.5px 0px; /* Adjust to suit */
+    margin-bottom: 40px;
+}
+
+
+/* Forgot Password Form Section */
+.fgpw-form {
+    padding: 0 40px 20px 40px;
+}
+input.email {
+    padding: 20px 12px;
+    margin-bottom: 10px;
+}
+
+input.submit-fgpw {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#328fce+0,007acc+100 */
+    background: #328fce; /* Old browsers */
+    background: -moz-linear-gradient(top,  #328fce 0%, #007acc 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #328fce 0%,#007acc 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #328fce 0%,#007acc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#328fce', endColorstr='#007acc',GradientType=0 ); /* IE6-9 */
+    border: none;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+input.submit-fgpw:hover {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#007acc+0,0060aa+100 */
+    background: #007acc; /* Old browsers */
+    background: -moz-linear-gradient(top,  #007acc 0%, #0060aa 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #007acc 0%,#0060aa 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #007acc 0%,#0060aa 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007acc', endColorstr='#0060aa',GradientType=0 ); /* IE6-9 */
+}
+
+p.error {
+    padding: 10px 20px;
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    color: #a94442;
+    border-radius: 5px;
+}
+p.success {
+    padding: 10px 20px;
+    background-color: rgba(73, 255, 73, 0.48);
+    color: #197901;
+    border-radius: 5px;
+    border: 1px solid #87B17C;
+    word-wrap: normal;
+    margin-bottom: 10px;
+}
+.fgpw-form .form-group {
+    margin-top: 20px;
+}
+
+/* back to login link */
+a.login {
+    float: right;
+    margin-top: 11px;
+    color: #111;
+    text-decoration: none;
+}
+a.login:hover {
+    color: #328fce;
+    text-decoration: none;
+}
