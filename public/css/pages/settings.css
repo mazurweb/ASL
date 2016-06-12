@@ -1,0 +1,27 @@
+h4 {
+    color: #111;
+    padding: 0 0 0 10px;
+    margin-top: 10px;
+}
+h4 i.fa-cogs {
+    color: #328fce;
+    margin-right: 15px;
+}
+.updateInfo {
+    padding: 10px;
+}
+.updateEmail {
+    padding: 10px;
+}
+.updatePassword {
+    padding: 10px;
+}
+input.btn {
+    background: #515151;
+    border: none;
+    color: #fff;
+}
+input.btn:hover {
+    background: #328fce;
+    color: #fff;
+}

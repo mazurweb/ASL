@@ -37,3 +37,9 @@ Route::post('/password/reset/', 'Auth\PasswordController@postReset');
 Route::get('/register', 'Auth\AuthController@getRegister');
 Route::post('/register', 'Auth\AuthController@postRegister');
 
+// Account Settings Routes...
+Route::get('account', 'AccountController@getAccount');
+Route::post('account/info', 'AccountController@updateInfo');
+Route::post('account/email', 'AccountController@updateEmail');
+Route::post('account/password', 'AccountController@changePassword');
+
