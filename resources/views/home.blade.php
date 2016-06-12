@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('title')
+    Company Portal | Proctor Gallagher Institute
+@endsection
 @section('stylesheet')
     {{ asset('css/pages/home.css') }}
 @endsection
