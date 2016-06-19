@@ -11,7 +11,7 @@
 |
 */
 
-// Used to create compatability with Angulars {{ }} body tags
+// Used to create compatability with Angular {{ }} body tags
 Blade::setContentTags('<%', '%>');        // for variables and all things Blade
 Blade::setEscapedContentTags('<%%', '%%>');   // for escaped data
 

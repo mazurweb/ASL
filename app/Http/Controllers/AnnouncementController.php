@@ -38,7 +38,7 @@ class AnnouncementController extends Controller
         $body = Input::get('body');
 
         if($validation->fails()) {
-            return Redirect::back()->withInput()->withErrors($validation->message());
+            return Redirect::back()->withInput()->withErrors($validation->messages());
         } else {
             $announcement->title = $title;
             $announcement->body = $body;

@@ -16,6 +16,16 @@
                     </div>
 
                     <div class="panel-body">
+                        @if (count($errors) > 0)
+                            <div class="alert alert-danger col-md-6 col-xs-12 col-md-offset-3 col-xs-offset-0">
+                                <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li><% $error %></li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         @if(Session::has('message'))
                             <div class="form-group">
                                 <div class="alert alert-success col-md-6 col-xs-12 col-md-offset-3 col-xs-offset-0" style="margin-top: 10px; text-align: center;"> <%Session::get('message')%> </div>
