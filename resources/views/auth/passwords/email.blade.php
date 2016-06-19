@@ -7,7 +7,7 @@
     <title>Forgot Password | Proctor Gallagher Institute</title>
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ 'css/pages/fgpw.css' }}" />
+    <link rel="stylesheet" type="text/css" href="<% 'css/pages/fgpw.css' %>" />
 </head>
 <body>
 <div id="wrapper">
@@ -15,7 +15,7 @@
         <div class="row">
             <div class="fgpw-section">
                 <div id="fgpw-logo">
-                    <img src="{{ 'images/pgi-logo.png' }}" class="logo">
+                    <img src="<% 'images/pgi-logo.png' %>" class="logo">
                 </div>
                 <div class="fgpw-header">
                     <h3 class="header-content">Forgot Your Password</h3>
@@ -23,7 +23,7 @@
                 <div class="fgpw-form">
                     @if (session('status'))
                         <div class="alert alert-success">
-                            {{ session('status') }}
+                            <% session('status') %>
                         </div>
                     @endif
 
@@ -32,13 +32,13 @@
                             <strong>Whoops!</strong> There were some problems with your input.<br><br>
                             <ul>
                                 @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
+                                    <li><% $error %></li>
                                 @endforeach
                             </ul>
                         </div>
                     @endif
-                    <form action="{{ url('/forgot-password') }}" method="post">
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <form action="<% url('/forgot-password') %>" method="post">
+                        <input type="hidden" name="_token" value="<% csrf_token() %>">
                         <input id="email" name="email" placeholder="Email" type="email" class="form-control email">
                         <div class="form-group">
                             <input name="submit" type="submit" value="Submit" class="submit-fgpw">

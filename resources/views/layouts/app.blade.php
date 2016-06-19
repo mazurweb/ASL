@@ -1,5 +1,5 @@
 @if(Auth::guest())
-    <script>window.location = "{{ url('/login') }}";</script>
+    <script>window.location = "<% url('/login') %>";</script>
 @else
 <!DOCTYPE html>
 <html lang="en">
@@ -16,8 +16,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
-    <link href="{{ asset('css/main.css') }}" rel="stylesheet" type="text/css" />
+    <link href="<% asset('css/main.css') %>" rel="stylesheet" type="text/css" />
     <link href="@yield('stylesheet')" rel="stylesheet" type="text/css" />
 
     <style>
@@ -35,18 +34,18 @@
         <div class="container">
             <div class="row">
                 <div id="logo">
-                    <a href="{{ url('/') }}"><img src="{{ asset('images/pgi-logo.png') }}"></a>
+                    <a href="<% url('/') %>"><img src="<% asset('images/pgi-logo.png') %>"></a>
                 </div>
                 <div class="nav col-sm-8 pull-right">
                     <div class="navbar-right user pull-right">
-                        <span><i class="fa fa-user"></i>{{ Auth::user()->username }}</span>
+                        <span><i class="fa fa-user"></i><% Auth::user()->username %></span>
                         <div class="menu pull-right ">
                             <ul>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle dropbars" data-toggle="dropdown" role="button"><i class="fa fa-caret-down"></i></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="{{ url('/account') }}">Manage Account</a></li>
-                                        <li><a href="{{ url('/logout') }}">Logout</a></li>
+                                        <li><a href="<% url('/account') %>">Manage Account</a></li>
+                                        <li><a href="<% url('/logout') %>">Logout</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -67,8 +66,18 @@
 
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <!--Angular Scripts -->
+    <script src="<% asset('/bower_components/angular/angular.js') %>"></script>
+    <script src="<% asset('/bower_components/angular-resource/angular-resource.js') %>"></script>
+    <!-- Plugins -->
+    <script src="<% asset('/js/lib/jTimeout/jTimeout-v2.0.min.js') %>"></script>
+
+    <!-- Page Scripts -->
+    <script src="/js/main.js"></script>
+    @yield('js-page')
 </body>
 </html>
 @endif

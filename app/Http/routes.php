@@ -11,6 +11,10 @@
 |
 */
 
+// Used to create compatability with Angulars {{ }} body tags
+Blade::setContentTags('<%', '%>');        // for variables and all things Blade
+Blade::setEscapedContentTags('<%%', '%%>');   // for escaped data
+
 Route::get('/', function () {
     return view('home');
 });
@@ -42,3 +46,6 @@ Route::post('account/info', 'AccountController@updateInfo');
 Route::post('account/email', 'AccountController@updateEmail');
 Route::post('account/password', 'AccountController@changePassword');
 
+// API Routes
+Route::get('api/get-announcements', 'AnnouncementController@getAnnouncements');
+Route::post('api/create-announcement', 'AnnouncementController@createAnnouncement');
