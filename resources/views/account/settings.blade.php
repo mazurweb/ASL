@@ -15,7 +15,7 @@
                 <div class="col-md-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h4><i class="fa fa-cogs"></i>Account Settings</h4>
+                            <h3><i class="fa fa-cogs"></i>Account Settings</h3>
                         </div>
 
                         <div class="panel-body">

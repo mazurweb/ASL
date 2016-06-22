@@ -38,14 +38,22 @@ Route::get('/password/reset/{token}', 'Auth\PasswordController@getReset');
 Route::post('/password/reset/', 'Auth\PasswordController@postReset');
 
 // Register Routes...
-Route::get('register', 'UserRegController@getReg');
-Route::post('register', 'UserRegController@postReg');
+Route::get('admin/register', 'UserRegController@getReg');
+Route::post('admin/register', 'UserRegController@postReg');
 // Account Settings Routes...
 Route::get('account', 'AccountController@getAccount');
 Route::post('account/info', 'AccountController@updateInfo');
 Route::post('account/email', 'AccountController@updateEmail');
 Route::post('account/password', 'AccountController@changePassword');
 
+//Admin Employee Lists
+Route::get('admin/employee-list', 'AdminController@getEmployeeList');
+
+//User Routes
+Route::get('user/edit/{id}', 'UserController@getEditUser')->where('id', '[0-9]+');
+Route::post('user/edit/edit-user', 'UserController@editUser');
+
 // API Routes
 Route::get('api/get-announcements', 'AnnouncementController@getAnnouncements');
 Route::post('api/create-announcement', 'AnnouncementController@createAnnouncement');
+Route::get('/api/employee-list', 'EmployeeListController@getList');

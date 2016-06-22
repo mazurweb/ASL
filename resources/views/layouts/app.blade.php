@@ -19,6 +19,9 @@
     <link href="<% asset('css/main.css') %>" rel="stylesheet" type="text/css" />
     <link href="@yield('stylesheet')" rel="stylesheet" type="text/css" />
 
+    <link rel="stylesheet" href="<% asset('/css/lib/jAlert/jAlert-v3.css') %>">
+    <link rel="stylesheet" href="<% asset('/css/lib/DataTable/jquery.dataTables.min.css') %>">
+
     <style>
         body {
             font-family: 'Lato';
@@ -59,6 +62,13 @@
         <div class="container">
             <ul class="navbar-nav navbar-left dash-menu">
                 <li style="color: #fff;"><a href="/"><i class="fa fa-home"></i>Home</a></li>
+                <li style="color: #fff;" class="dropdown">
+                    <a class="dropdown-toggle"><i class="fa fa-lock"></i>Admin</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/admin/register"><i class="fa fa-user"></i>Register User</a></li>
+                        <li><a href="/admin/employee-list"><i class="fa fa-list"></i>Employee List</a></li>
+                    </ul>
+                </li>
         </div>
     </nav>
 
@@ -73,6 +83,11 @@
     <script src="<% asset('/bower_components/angular/angular.js') %>"></script>
     <script src="<% asset('/bower_components/angular-resource/angular-resource.js') %>"></script>
     <!-- Plugins -->
+    <script src="<% asset('/js/lib/DataTable/jquery.dataTables.min.js') %>"></script>
+    <script src="<% asset('/js/lib/DataTable/angular-datatables.min.js') %>"></script>
+    <script src="https://cdn.datatables.net/buttons/1.1.0/js/dataTables.buttons.min.js"></script>
+    <script src="<% asset('/js/lib/jAlert/jAlert-v3.js') %>"></script>
+    <script src="<% asset('/js/lib/jAlert/jAlert-functions.min.js') %>"></script>
     <script src="<% asset('/js/lib/jTimeout/jTimeout-v2.0.min.js') %>"></script>
 
     <!-- Page Scripts -->

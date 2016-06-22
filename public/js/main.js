@@ -10,7 +10,7 @@ $(document).ready(function(){
         'originalTitle': document.title,
 
         'tabID': false,
-        'timeoutAfter': 1440,
+        'timeoutAfter': 300,
         'heartbeat': 1,
 
         'extendOnMouseMove': true,
